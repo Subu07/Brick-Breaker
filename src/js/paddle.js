@@ -11,9 +11,7 @@ export default class Paddle {
   }
 
   draw(ctx) {
-    console.log("paddle");
-
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "#0ff";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 }
