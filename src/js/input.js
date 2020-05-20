@@ -8,7 +8,7 @@ class InputHandler {
           paddle.moveLeft();
           break;
         case 39:
-          alert("Move Right");
+          paddle.moveRight();
 
         default:
           break;

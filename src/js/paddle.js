@@ -1,7 +1,8 @@
 export default class Paddle {
   constructor(gameWidth, gameHeight) {
-    console.log("Paddle object is created.");
-    this.width = 150;
+    (this.gameWidth = gameWidth),
+      (this.gameHeight = gameHeight),
+      (this.width = 150);
     this.height = 30;
 
     this.maxSpeed = 7;
@@ -17,6 +18,10 @@ export default class Paddle {
     this.speed = -this.maxSpeed;
   }
 
+  moveRight() {
+    this.speed = this.maxSpeed;
+  }
+
   draw(ctx) {
     ctx.fillStyle = "#0ff";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
@@ -28,6 +33,9 @@ export default class Paddle {
     this.position.x += this.speed;
 
     if (this.position.x < 0) this.position.x = 0;
-    // console.log(this.position.x);
+
+    if (this.position.x + this.width > this.gameWidth) {
+      this.position.x = this.gameWidth - this.width;
+    }
   }
 }
