@@ -1,0 +1,8 @@
+*{
+    margin: 10px 60px;
+    padding: 0;
+}
+
+canvas{
+    border: 1px solid black;
+}
