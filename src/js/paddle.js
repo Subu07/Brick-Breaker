@@ -5,7 +5,7 @@ export default class Paddle {
       (this.width = 150);
     this.height = 30;
 
-    this.maxSpeed = 7;
+    this.maxSpeed = 10;
     this.speed = 0;
 
     this.position = {
@@ -20,6 +20,9 @@ export default class Paddle {
 
   moveRight() {
     this.speed = this.maxSpeed;
+  }
+  stop () {
+    this.speed = 0;
   }
 
   draw(ctx) {
